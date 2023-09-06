@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: aqua;
+        }
+
+        select {
+            font-size: 34px;
+            font-size: 30px;
+            margin-left: 40%;
+            border-color: pink;
+            border-width: 12px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="" required>
+        <option value="">Select your option</option>
+        <option value="Vikash">Vikash Tiwari</option>
+        <option value="Babloo">Babloo Tiwari</option>
+        <option value="Abhishek">Abhishek Tiwari</option>
+        <option value="Saurabh">Saurabh Tiwari</option>
+        <option value="Gaurabh">Gaurabh Tiwari</option>
+    </select><br><br>
+    <select name="" id="">
+        <option value="">Select your choice</option>
+    </select>
+
+</body>
+<script>
+    let Selector = document.getElementsByTagName('select');
+    Selector[0].addEventListener('change', () => {
+        if (Selector[0].value === 'Vikash')
+            Selector[1].innerHTML = "<option value=''>Select your choice</option><option value='Tiwri'>Nice</option><option value='Rampur'>Smart</option><option value='Wale'>Pro</option><option value='hai'>Buggu Father</option>";
+        else if (Selector[0].value === 'Babloo')
+            Selector[1].innerHTML = "<option value=''>Select your choice</option><option value='Tiwri'>Killer</option><option value='Rampur'>Alhi Star</option><option value='Wale'>Noobda</option><option value='hai'>Buggu Uncle</option>";
+        else if (Selector[0].value === 'Abhishek')
+            Selector[1].innerHTML = "<option value=''>Select your choice</option><option value='Tiwri'>Codder</option><option value='Rampur'>Pro</option><option value='Wale'>Ludo King</option><option value='hai'>Bhaluwa ke bhatar</option>";
+        else if (Selector[0].value === 'Saurabh')
+            Selector[1].innerHTML = "<option value=''>Select your choice</option><option value='Tiwri'>Rani</option><option value='Rampur'>Ludo Looser</option><option value='Wale'>Thobda</option><option value='hai'>Run Piwane wala</option>";
+        else if (Selector[0].value === 'Gaurabh')
+            Selector[1].innerHTML = "<option value=''>Select your choice</option><option value='Tiwri'>Randi</option><option value='Rampur'>7 Bhatar Wali</option><option value='Wale'>chhihatari</option><option value='hai'>Bholu Bhosni</option>";
+    })
+</script>
+
+</html>

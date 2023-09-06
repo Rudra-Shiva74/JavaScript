@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Abhi {
+            background: #000;
+        }
+
+        .hii {
+            color: aliceblue;
+        }
+
+        .hello {
+            color: rgb(237, 27, 45);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hello Abhsihek tiwari</h1>
+</body>
+<script>
+    let htag = document.getElementsByTagName("h1")[0];
+    console.log(htag.className);
+    console.log(htag.classList.value);
+    // htag.add("Abhi");
+    // htag.className = "Abhi hello";
+    // htag.remove("hii");
+    htag.classList.toggle("hii");
+    console.log(htag.className);
+    console.log(htag.classList.value);
+</script>
+
+</html>

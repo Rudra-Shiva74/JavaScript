@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    async function myfunc() {
+        let RampurWeather = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("34 Degree");
+            }, 2000);
+        }); let MahuariWeather = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("37 Degree");
+            }, 4000);
+        });
+        console.log("Start");
+        let RampurW = await RampurWeather
+        let MahuariW = await MahuariWeather;
+        console.log("End");
+        return [RampurW, MahuariW];
+    }
+    let cherry = async () => {
+        setTimeout(() => {
+            console.log('Hello Everyone my name is Abhishek');
+        }, 10000)
+    }
+    let cons = async () => {
+        await myfunc().then((value) => {
+            console.log(value);
+        })
+        await cherry();
+    }
+    cons();
+</script>
+
+</html>

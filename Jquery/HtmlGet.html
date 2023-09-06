@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <button id="Text">Text</button><button id="html">Html</button>
+    <p>This is the <b>Bold</b> Paragraph</p>
+    <input type="text" name="" id="" value="Abhishek Tiwari">
+    <a href="Event.html">click</a>
+    <a href="ColorSetter.html">click</a>
+</body>
+<script>
+    $(() => {
+        $("#html").click(() => {
+            console.log($("p").html());
+        })
+        $("#Text").click(() => {
+            console.log($("p").text());
+        })
+        $("input").on("input", function () {
+            console.log($(this).val());
+        })
+        $("a").each(function () {
+            console.log($(this).attr("href"));
+        })
+    })
+</script>
+
+</html>

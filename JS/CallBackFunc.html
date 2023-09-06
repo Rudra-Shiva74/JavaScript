@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function loadscript(src, callback) {
+        let script = document.createElement("script");
+        script.src = src;
+        script.onload = function () {
+            console.log("script is loaded");
+            callback(null, src);
+        }
+        script.onerror = function () {
+            console.log("script is not loaded")
+            callback(new Error("src not loaded"));
+        }
+        document.body.append(script);
+    }
+    function load(error, src) {
+        if (error) {
+            console.log(error);
+            return;
+        }
+        console.log("src is loaded");
+    }
+    loadscript("https://cdn.jsdelivr.net/npm/bootstrist/js/bootstrap.bundle.min.js", load);
+</script>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #4107e0;
+        }
+
+        input {
+            /* margin-left: 50%; */
+            padding: 20px;
+            height: 10px;
+            width: 350px;
+            margin-left: 60px;
+        }
+
+        button {
+            /* padding: 30px; */
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            background: #000;
+            color: aliceblue;
+            margin-left: 60px;
+        }
+
+        div {
+            text-align: center;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="result" readonly placeholder="output"><br>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button><br>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button><br>
+        <button>9</button>
+        <button>0</button>
+        <button>+</button>
+        <button>-</button><br>
+        <button>*</button>
+        <button>/</button>
+        <button>=</button>
+        <button>C</button>
+    </div>
+</body>
+<script>
+    let buttons = Array.from(document.getElementsByTagName("button"));
+    let str = "";
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            if (button.textContent == 'C') {
+                str = "";
+                document.getElementById('result').value = str;
+            }
+            else if (button.textContent == '=') {
+                str = eval(str);
+                document.getElementById('result').value = str;
+            }
+            else {
+                str = str + button.textContent;
+                document.getElementById("result").value = str;
+            }
+        });
+    });
+</script>
+
+</html>

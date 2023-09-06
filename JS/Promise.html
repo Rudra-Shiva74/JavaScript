@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let promise1 = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("i Am a promise i am fullfilled");
+            resolve(true);
+        }, 5000);
+    });
+    let promise2 = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("i Am a promise i am fullfilled");
+            reject(new Error("hello everyone"));
+        }, 5000);
+    });
+    promise1.then(() => {
+        console.log("your promise is resolve");
+    })
+    promise2.catch((error) => {
+        console.log("your promise is reject" + error);
+    })
+</script>
+
+</html>

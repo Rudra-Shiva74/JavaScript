@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery HideShowToggle</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="show">show</button>
+    <button id="hide">hide</button>
+    <button id="toggle">toggle</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, fugiat necessitatibus voluptas soluta laboriosam
+        perspiciatis porro quae reprehenderit itaque voluptate, dolor, laborum consectetur odio aliquid provident
+        aspernatur id repudiandae in modi! Pariatur, magnam id?</p>
+</body>
+<script>
+
+    $(() => {
+        $("#show").click(() => {
+            $("p").show("slow");      //we can add time also in hide and show;
+        })
+        $("#hide").click(() => {
+            $("p").hide(1000);
+        })
+        $("#toggle").click(() => {
+            $("p").toggle(2000, () => {
+                console.log("hello everyone");  //we can add any function also after timing
+            });
+        })
+    })
+
+</script>
+
+</html>

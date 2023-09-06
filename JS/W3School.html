@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background: #d01212;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit est id recusandae
+        veniam maiores aperiam in, aliquam qui nobis, pariatur distinctio tempore minus aliquid consectetur
+        necessitatibus. Ipsa enim, asperiores necessitatibus accusamus obcaecati alias ullam reprehenderit quo eos
+        ducimus! Omnis ipsum laborum consequuntur alias aut quidem, nemo eos architecto earum impedit? Animi obcaecati
+        enim, repudiandae porro error neque ipsam aliquid veniam quia temporibus iusto ex qui doloribus similique?
+        Architecto, molestiae dicta possimus earum aliquid facilis animi ipsam quibusdam itaque dolores reiciendis vero
+        ullam quia impedit, laudantium nihil praesentium odio illum odit corporis incidunt explicabo! Sapiente aliquam
+        tenetur facere harum quod minus!
+        <button>Remove me</button>
+    </div>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+</body>
+<script>
+    let x = function (e) {
+        document.getElementById("demo").innerHTML = Math.random();
+        document.getElementById("demo2").innerHTML = e;
+        console.log(e);
+    }
+    let divTag = document.getElementsByTagName("div")[0];
+    console.log(divTag);
+    divTag.addEventListener("mousemove", x);
+    let remove = document.getElementsByTagName("button")[0];
+    remove.addEventListener("click", function () {
+        console.log("hello");
+        divTag.removeEventListener("mousemove", x);
+    })
+</script>
+
+</html>

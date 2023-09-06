@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Events</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam omnis consequuntur beatae. Reprehenderit non
+        incidunt eius dignissimos enim accusamus repudiandae blanditiis, nulla, sit facere repellat minima molestiae sed
+        culpa laborum magni doloremque hic distinctio beatae omnis vero sapiente officiis ad.</div>
+    <p id="demo"></p>
+    <input type="text"><input type="text">
+</body>
+<script>
+    // $(() => {
+    //     $("div").click(() => {
+    //         $("p").html("Hello I am click");
+    //     })
+    // })
+
+    // $(() => {
+    //     $("div").dblclick(() => {
+    //         $("p").html("Hello I am dblclick");
+    //     })
+    // })
+
+    // $(() => {
+    //     $("div").mouseenter(() => {
+    //         $("p").html("Hello I am mouseenter")
+    //     })
+    // })
+
+    // $(() => {
+    //     $("div").mouseleave(() => {
+    //         $("p").html("Hello I am mouseleave");
+    //     })
+    // })
+
+    // $(() => {
+    //     $("div").mousedown(() => {
+    //         $("p").html("Hello I am mouseleave");
+    //     })
+    // })
+
+    //hover event takes two method
+    // $(() => {
+    //     $("div").hover(() => {
+    //         $("p").html("You Are Enter Now");
+    //     }, () => {
+    //         $("p").html("You Are Leave Now");
+    //     })
+    // }) q
+    $(() => {
+        $("input").focus(function () {
+            $(this).css("background-color", "red");
+        });
+        $("input").blur(function () {
+            $(this).css("background-color", "pink");
+        });
+    })
+    $(() => {
+        $("div").click( function () {
+            $(this).hide();
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>click1</button>
+    <button>click2</button>
+    <button>click3</button>
+    <table>
+        <tr>
+            <th>FName</th>
+            <th>LName</th>
+        </tr>
+        <tr>
+            <td>Abhi</td>
+            <td>Tiwar</td>
+        </tr>
+    </table>
+    <table style="display: none;">
+        <tr>
+            <th>FName2</th>
+            <th>LName</th>
+        </tr>
+        <tr>
+            <td>Abhi2</td>
+            <td>Tiwar</td>
+        </tr>
+    </table>
+    <table style="display: none;">
+        <tr>
+            <th>FName3</th>
+            <th>LName</th>
+        </tr>
+        <tr>
+            <td>Abhi3</td>
+            <td>Tiwar</td>
+        </tr>
+    </table>
+</body>
+<script>
+    let buttonclick = Array.from(document.getElementsByTagName("button"));
+    let Table = document.getElementsByTagName("table");
+    buttonclick.forEach(function (button, index) {
+        button.addEventListener("click", () => {
+            for (let i = 0; i < Table.length; i++)
+                Table[i].style.display = "none";
+            Table[index].style.display = "block";
+        })
+    })
+
+</script>
+
+</html>

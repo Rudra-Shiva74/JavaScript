@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1>Hello Aniket Husband of Amisha</h1>
+            <h1>Hello Abhishek Tiwari</h1>
+            <h1>Hello Saurabh Tiwari</h1>
+            <p>We are Brothers</p>
+        </div>
+    </div>
+</body>
+<script>
+    let pTag = document.getElementsByTagName("p")[0];
+    console.log(pTag.parentNode);
+    console.log(pTag.parentElement);
+    let hTag = document.getElementsByTagName("h1")[0];
+    console.log(hTag.nextSibling);
+    console.log(hTag.nextElementSibling);
+    let htmlTag = document.getElementsByTagName("html")[0];
+    console.log(htmlTag.parentNode);
+    console.log(htmlTag.parentElement);
+</script>
+
+</html>

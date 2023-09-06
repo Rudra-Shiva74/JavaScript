@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery JS setColor</title>
+    <style>
+        div {
+            width: 300px;
+            border: 2px solid green;
+
+            height: 300px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div></div>
+    <input type="text" placeholder="Enter Your Color">
+</body>
+<script>
+    //setColor using javascript
+    // let inputTag = document.getElementsByTagName("input")[0];
+    // let divTag = document.getElementsByTagName("div")[0];
+    // inputTag.addEventListener("input", () => {
+    //     divTag.style.background = inputTag.value;
+    // })
+
+    //setColor using Jquery
+    $(() => {
+        $("input").on("input", function () {
+            $("div").css("background-color", this.value)
+        })
+    })
+</script>
+
+</html>

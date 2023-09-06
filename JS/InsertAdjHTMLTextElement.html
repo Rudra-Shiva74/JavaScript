@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="first">hello Abhishek tiwari ji rampur wale hai hum </div>
+</body>
+<script>
+    let first = document.getElementById("first");
+    first.insertAdjacentHTML("afterend", '<h1>afterend</h1>');
+    first.insertAdjacentHTML("beforeend", '<h1>beforeend</h1>');
+    first.insertAdjacentHTML("beforebegin", '<h1>beforebegin</h1>');
+    first.insertAdjacentHTML("afterbegin", '<h1>afterbegin</h1>');
+    first.remove();
+</script>
+
+</html>

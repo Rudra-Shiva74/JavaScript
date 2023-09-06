@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<body>
+
+</body>
+<script>
+    let text = "Abhishek Tiwari is the very \"good\" boy";
+    document.getElementById("demo").innerHTML = text;
+    document.getElementById("demo2").innerHTML = "i am \
+breaking the line";
+    let str1 = "Abhi";
+    let str2 = new String("Abhi");
+    let str3 = new String("Abhi");
+    console.log(str1 == str2);      //comparing two string
+    console.log(str1 === str2);      //it is false bc it compare datatype also
+    console.log(str2 == str3);
+    console.log(str2 === str3);     //comapring two obj is always false
+    //there are some method to use in string
+    let part = text.slice(0, 6);            //it take index first and end -1
+    console.log(part);
+    part = text.slice(5);
+    console.log(part);
+    part = text.substr(9, 15);             //it take first index and lenght of the string
+    console.log(part);
+</script>
+
+</html>

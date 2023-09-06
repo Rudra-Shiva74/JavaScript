@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanp wala game</title>
+    <style>
+        p {
+            height: 2rem;
+            width: 2rem;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button onclick="func()">click</button>
+    <p id="demo" style="background: white;"></p>
+</body>
+<script>
+    let sum = 0;
+    let flag = false;
+    function func() {
+        let number = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+        let ButtonNumber = document.getElementsByTagName("p");
+        let Button = document.getElementsByTagName("button");
+        document.getElementById('demo').innerHTML = number;
+        if (flag) {
+            sum += number;
+            console.log(sum);
+            if (sum == ButtonNumber.length - 2) {
+                document.getElementById('demo').innerHTML = "you won";
+                Button[0].style.display = 'none';
+            }
+            else if (sum > ButtonNumber.length - 2) {
+                sum -= number;
+            }
+            ButtonNumber[sum - number].style.background = 'black';
+            ButtonNumber[sum].style.background = 'red';
+        }
+        else if (number == 6) {
+            flag = true;
+            ButtonNumber[0].style.background = 'red';
+        }
+    }
+</script>
+
+</html>

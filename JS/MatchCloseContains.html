@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" id="id1">Hell Abhishek Tiwari ji <span id="sp1">hello i am span</span></div>
+    <div class="box" id="id2">Hell Abhishek Tiwari ji2</div>
+</body>
+<script>
+    let id = document.getElementById("id1");
+    let sp1 = document.getElementById("sp1");
+    console.log(id.matches("#id1"));
+    console.log(sp1.closest("#sp1"));
+    console.log(id.contains(sp1));
+</script>
+
+</html>

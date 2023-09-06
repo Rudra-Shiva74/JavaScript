@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>hello Everyone My name is Abhishek Tiwari</div>
+</body>
+<script>
+    let divTag = document.getElementsByTagName("div")[0];
+    divTag.innerHTML = divTag.innerHTML + '<h1>Hello RudraAbhi</h1>';
+    let div = document.createElement("div");
+    div.innerHTML = "<h1>Hello RudraAbhiShiva</h1>";
+    // divTag.append(div);
+    // divTag.after(div);
+    // divTag.prepend(div);
+    divTag.replaceWith(div);
+</script>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    // 1.              
+    // let loadScript = (scr) => {
+    //     return new Promise((resolve, reject) => {
+    //         let script = document.createElement("script");
+    //         script.src = scr;
+    //         document.body.append(script);
+    //         script.onload = () => {
+    //             resolve(1);
+    //         }; script.onerror = () => {
+    //             reject(0);
+    //         }
+    //     })
+    // }
+    // loadScript("Pattern.js").then(() => { alert("complete") }).catch(() => { console.log("not complete") });
+
+    // 2.
+    // let promise = async () => {
+    //     let p1 = new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             reject(new Error("Reject promise"));
+    //         }, 3000);
+    //     })
+    //     return p1;
+    // }
+    // let a = async () => {
+    //     try {
+    //         let c = await promise();
+    //         console.log(c);
+    //     }
+    //     catch {
+    //         console.log("Hello Abhishek Tiwari");
+    //     }
+    // }
+    // a();
+
+    // 3
+    let p1 = () => {
+        return new Promise((resolve, reject) => {
+            resolve("Hello I am Promise 1");
+        }, 2000);
+    }; let p2 = () => {
+        return new Promise((resolve, reject) => {
+            resolve("Hello I am Promise 2");
+        }, 2000);
+    }; let p3 = () => {
+        return new Promise((resolve, reject) => {
+            resolve("Hello I am Promise 3");
+        }, 2000);
+    }
+    let p = async () => {
+        console.time("Run");
+        // let pm1 = await p1();
+        // let pm2 = await p2();
+        // let pm3 = await p3();
+        let pm1 = p1();
+        let pm2 = p2();
+        let pm3 = p3();
+        // console.log(pm1, pm2, pm3);
+        let pm = await Promise.allSettled([pm1, pm2, pm3]);
+        console.log(pm);
+        console.timeEnd("Run");
+    }
+    p();
+</script>

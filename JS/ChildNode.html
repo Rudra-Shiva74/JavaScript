@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello1</h1>
+    <div id="myId">
+        <h1>ddd</h1>
+        <h1>ddd</h1>
+        <h1>ddd</h1>
+    </div>
+
+    <script>
+        let vari = document.body.childNodes;
+        console.log(vari);
+        vari = document.body.children;
+        console.log(vari);
+        let ss = document.getElementById('myId').childNodes.length;
+        console.log(ss);
+        let ch1 = document.body.firstChild;
+        console.log(ch1);
+    </script>
+</body>
+
+</html>

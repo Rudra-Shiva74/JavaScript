@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text"></div>
+</body>
+<script>
+    let arr = [
+        "Initialiging Hack Tool...",
+        "Find User Name..",
+        "Hello Everyone...",
+        "Hii I am Abhishek Tiwari...",
+        "Hii I am rudransh Tiwari..."
+    ]
+    const sleep = async (second) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(true);
+            }, second * 1000);
+        })
+    }
+    let showHack = async (massege) => {
+        await sleep(2);
+        console.log(massege);
+        let text = document.getElementById("text")
+        text.innerHTML += massege + "<br>";
+    }
+    (async () => {
+        for (let i = 0; i < arr.length; i++) {
+            await showHack(arr[i]);
+        }
+    })();
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let promise = new Promise((resolve, reject) => {
+        resolve("Hello World");
+    })
+    promise.then((result1) => {
+        console.log(result1);
+        return new Promise((resolve, reject) => {
+            resolve("Abhishek is good boy");
+        })
+            .then((result2) => {
+                console.log(result2);
+                return new Promise((resolve, reject) => {
+                    resolve("Abhishrk is bad boy");
+                    reject("reject the Abhishek ");
+                }).then(
+                    function reject(result) {
+                        console.log(result);
+                    },
+                    function resolve(result) {
+                        console.log(result);
+                    }
+                )
+            })
+    });
+    console.log(promise);
+</script>
+
+</html>

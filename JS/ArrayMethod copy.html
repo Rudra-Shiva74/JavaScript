@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr1 = ["Abhishek", "tiwari", "Rampur", "Wale", "hum", "dd"];
+    //at return an index number at() first element and -1 is last element
+    console.log(arr1.at(0));
+
+    //concat() process to add two or more arr;
+    let arr2 = ["tillu", "kittu", "babloo"];
+    let add = arr1.concat(arr2, arr1, arr2); //we are adding multiple array
+    console.log(add);
+
+    // copyWithin()     not clear
+    console.log(arr1.copyWithin(2, 0, 4));
+
+    //entries() return the key value and index of array;
+    let f = arr1.entries();
+    for (let s of f)
+        console.log(s);
+
+    //every()       not clear
+    let arr3 = [40, 45, 50, 55, 60];
+    function pass(el, index, arr) {
+        return el > 23
+    }
+    console.log(arr3.every(pass));
+    let survey = [
+        { name: "Abdhi", ans: "Yes" },
+        { name: "Abhi", ans: "No" },
+        { name: "Abhi", ans: "Yes" },
+        { name: "Abhi", ans: "Yes" }
+    ];
+    survey.every(function (el, index, survey) {
+        console.log(el);
+    });
+
+    //fill()
+    arr1.fill("hahah", 2, 5);
+    console.log(arr1);
+
+    //flat()
+    let arr4 = [1, [2, [3], 4], 6];
+    let arr5 = arr4.flat(); console.log(arr5);
+    let arr6 = arr5.flatMap((x) => x * 2);
+    console.log(arr6);
+
+    //foreach loop
+    function myfun(el, index) {
+        console.log(el);
+    }
+    arr1.forEach(myfun);
+
+    //from
+    let text = "Abhishek Tiwari";
+    let arr7 = Array.from(text);
+    console.log(arr7);
+
+    //sort
+    let arr8 = [1, 20, 3, 4, 5, 6, 5, 4, 3, 2, 1];
+    console.log(arr8.sort());
+    console.log(arr8.sort(function (a, b) { return b - a; }))
+
+</script>
+
+</html>

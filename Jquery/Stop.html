@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Stop</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+        $(() => {
+
+            $("#start").click(() => {
+                $("#demo").slideDown(7000);
+            });
+            $("#stop").click(() => {
+                $("#demo").stop();
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <button id="stop">Stop</button>
+    <div id="start">click to slide</div>
+    <div id="demo" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio autem
+        neque est,
+        temporibus porro
+        quisquam Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur obcaecati sed commodi dolorem at
+        earum, laborum in, molestiae voluptas alias odio, perferendis autem similique. Totam explicabo tempora nulla
+        magni sapiente?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa est consectetur exercitationem
+        porro eligendi beatae nobis numquam dignissimos quaerat laborum aliquid, laboriosam repellendus. Hic aliquam
+        optio adipisci aperiam! Fuga, esse?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis vero officiis
+        odit maiores, dolor magni quas quidem, totam incidunt nihil labore, vel quae obcaecati nulla modi nisi cum
+        nostrum possimus?
+        deleniti reprehenderit sint unde a voluptatibus asperiores ipsam cupiditate tempora eius animi ea earum debitis?
+    </div>
+</body>
+
+</html>

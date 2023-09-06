@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Fadeing Method</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<style>
+    body{
+        background: #000;
+        color: aliceblue;
+    }
+</style>
+    </head>
+
+<body>
+    <button id="fadein">fadein</button>
+    <button id="fadeout">fadeout</button>
+    <button id="fadetoggle">fadetoggle</button>
+    <button id="fadeto">fadeto</button>
+    <div id="fade1" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quibusdam
+        perferendis quis ratione
+        velit
+        exercitationem nesciunt iste soluta provident odit obcaecati, quia voluptates, excepturi ut totam. Inventore
+        asperiores corrupti odio!</div>
+    <div id="fade2" style="display: none;">Consectetur similique debitis cumque enim assumenda tempora, ex vel
+        voluptatem architecto, ad omnis
+        nisi. Deleniti praesentium quis cum, in eos reiciendis, repellendus sapiente aut quia, laborum nulla.
+        Repellendus, ratione sapiente!</div>
+    <div id="fade3" style="display: none;">Repellat natus deserunt impedit omnis repudiandae vitae eveniet tempore
+        voluptatem magni tenetur,
+        vel
+        quis id esse atque? Delectus atque totam dicta obcaecati odit minima esse, eaque facilis at, qui autem!</div>
+</body>
+<script>
+    $(() => {
+        $("#fadein").click(() => {
+            $("#fade1").fadeIn();
+            $("#fade2").fadeIn(2000);
+            $("#fade3").fadeIn(3000);
+        })
+        $("#fadeout").click(() => {
+            $("#fade1").fadeOut();
+            $("#fade2").fadeOut(2000);
+            $("#fade3").fadeOut(3000);
+        })
+        $("#fadetoggle").click(() => {
+            $("#fade1").fadeToggle();
+            $("#fade2").fadeToggle(2000);
+            $("#fade3").fadeToggle(3000);
+        })
+        $("#fadeto").click(() => {
+            $("#fade1").fadeTo("slow",0.6);
+            $("#fade2").fadeTo("slow",0.5);
+            $("#fade3").fadeTo("slow",0.3);
+        })
+
+    })
+
+    //slideUp(), slideDown() and slideToggle() is work same as fade method
+</script>
+
+</html>

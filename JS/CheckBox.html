@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>checkbox</th>
+            <th>qnt</th>
+            <th>price</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="1"></td>
+            <td><input type="number" name="" id="" class="qnt" readonly></td>
+            <td><input type="number" class="price"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="2"></td>
+            <td><input type="number" name="" id="" class="qnt" readonly></td>
+            <td><input type="number" class="price"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="3"></td>
+            <td><input type="number" name="" id="" class="qnt" readonly></td>
+            <td><input type="number" class="price"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="4"></td>
+            <td><input type="number" name="" id="" class="qnt" readonly></td>
+            <td><input type="number" class="price"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="5"></td>
+            <td><input type="number" name="" id="" class="qnt" readonly></td>
+            <td><input type="number" class="price"></td>
+        </tr>
+    </table>
+    <input type="text" name="" id="totalprice">
+</body>
+<script>
+    let CheckBox = document.querySelectorAll('input[type="checkbox"]');
+    let Qnt = document.querySelectorAll(".qnt");
+    let Price = document.querySelectorAll(".price");
+
+    for (let index = 0; index < CheckBox.length; index++) {
+        CheckBox[index].addEventListener('change', function () {
+            if (CheckBox[index].checked) {
+                Qnt[index].readOnly = false;
+                Price[index].value = CheckBox[index].value * Qnt[index].value;
+            } else {
+                Qnt[index].value = null;
+                Qnt[index].readOnly = true;
+                Price[index].value = null;
+            }
+        });
+    }
+
+    Qnt.forEach(function (Qntity, index) {
+        Qntity.addEventListener("input", function () {
+            Price[index].value = CheckBox[index].value * Qnt[index].value;
+        });
+    });
+</script>
+
+</html>
